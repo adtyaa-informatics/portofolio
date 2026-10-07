@@ -34,6 +34,13 @@ jobs:
       - name: Build React
         run: npm run build
 
+      - name: Verify Build
+        run: |
+          echo "=== DIST INDEX.HTML ==="
+          cat dist/index.html
+          echo "=== DIST FILES ==="
+          find dist -maxdepth 2 -type f
+
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
