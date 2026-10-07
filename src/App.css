@@ -1570,7 +1570,7 @@
 }
 
 .school-page__identity > div + div {
-  border-top: 1px solid rgba(23, 23, 20, 0.25);
+  border-top: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
 }
 
 .school-page__identity .micro-label {
@@ -2108,27 +2108,6 @@
   color: var(--accent-ink);
 }
 
-:root[data-theme='dark'] .blog-note {
-  background: rgba(36, 36, 33, 0.94);
-}
-
-:root[data-theme='dark'] .blog-page__section-heading > p,
-:root[data-theme='dark'] .blog-note__body {
-  color: rgba(241, 241, 235, 0.78);
-}
-
-:root[data-theme='dark'] .blog-page__intro-meta {
-  border-color: rgba(241, 241, 235, 0.38);
-}
-
-:root[data-theme='dark'] .blog-note__footer {
-  border-color: rgba(241, 241, 235, 0.35);
-}
-
-:root[data-theme='dark'] .blog-note__image {
-  border-color: rgba(241, 241, 235, 0.2);
-}
-
 .not-found {
   min-height: 68svh;
   display: flex;
@@ -2229,7 +2208,7 @@
 }
 
 @media (max-width: 1100px) {
-  .hero h1 { font-size: 106px; }
+  .hero h1 { font-size: clamp(64px, 11vw, 106px); }
   .section-heading h2 { font-size: 70px; }
   .about h2 { font-size: 66px; }
   .contact h2 { font-size: 86px; }
